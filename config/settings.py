@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_ratelimit',
     'ip_tracking',
 ]
 
@@ -79,6 +81,8 @@ CACHES = {
         'TIMEOUT': 60 * 60 * 24,  # 24 horas
     }
 }
+
+
 
 
 # Database
@@ -127,3 +131,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+RATELIMIT_ENABLE = True
+
