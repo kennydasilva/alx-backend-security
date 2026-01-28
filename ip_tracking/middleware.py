@@ -17,7 +17,7 @@ class IPLoggingMiddleware:
     
 
     def get_client_ip(self, request):
-        x_forwarded_for=request.Meta.get('HTTP_X-FORWARDEDED_FOR')
+        x_forwarded_for=request.META.get('HTTP_X-FORWARDEDED_FOR')
 
         if x_forwarded_for:
             return x_forwarded_for.split(',')[0]
