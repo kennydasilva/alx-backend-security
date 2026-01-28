@@ -1,4 +1,4 @@
-from .models import RequestLog
+from .models import RequestLog, BlockedIP
 
 class IPLoggingMiddleware:
     def __init__(self, get_response):
@@ -6,6 +6,9 @@ class IPLoggingMiddleware:
     
     def __call__(self, request):
         ip_address= self.get_client_ip(request)
+
+
+        if 
 
         RequestLog.objects.create(
             ip_address=ip_address,
